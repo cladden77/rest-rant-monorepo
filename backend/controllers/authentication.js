@@ -27,7 +27,7 @@ router.get('/profile', async (req, res) => {
                 userId: req.session.userId
             }
         })
-        res.json(user)
+        res.json(req.currentUser.userId)
     }
     catch {
         res.json(null)
